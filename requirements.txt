@@ -1,0 +1,7 @@
+pandas
+plotly
+matplotlib
+seaborn
+nltk
+WordCloud
+requests
