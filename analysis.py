@@ -1,5 +1,6 @@
 #Supporting material
 # https://towardsdatascience.com/a-beginners-guide-to-sentiment-analysis-in-python-95e354ea84f6
+from tokenize import String
 import pandas as pd
 
 import matplotlib.pyplot as plt
@@ -38,12 +39,12 @@ textt = " ".join(review for review in df.review)
 cloudofwords = WordCloud(stopwords=stopwords).generate(textt)
 plt.imshow(cloudofwords, interpolation='bilinear')
 plt.axis("off")
-plt.savefig('wordcloudoveral.png')
+plt.savefig('wordcloudoverall.png')
 #plt.show()
 
 #Generating Sentiment Analysis based on App ratings
 df = df[df['rating'] != 3]
-df['sentiment'] = df['rating'].apply(lambda rating : +1 if rating > 3 else -1)
+df['sentiment'] = df['rating'].apply(lambda rating :+1 if rating > 3 else -1)
 
 # split df - positive and negative sentiment:
 positive = df[df['sentiment'] == 1]

@@ -14,13 +14,16 @@ import requests
 #BWS
 #appID = 1463355630
 #Dans
-appID = 708912408
+#appID = 708912408
+#Spotify
+#appID=324684580
+appid = json.load(open("appid.json"))
 appReviewUrl = "https://itunes.apple.com/au/rss/customerreviews/page={0}/id={1}/sortBy=mostRecent/json"
 print("Beginning to fetch reviews from iTunes")
 writeAppReviews = open("reviewsData.csv","a", encoding="utf8")
 writeAppReviews.write("timestamp"+","+"rating"+","+"title"+","+"review"+"\n")
 for pagenum in range(1,11):
-    appReviewUrl = appReviewUrl.format(pagenum, appID)
+    appReviewUrl = appReviewUrl.format(pagenum, appid['appstoreappid'])
     r = requests.get(url=appReviewUrl)
     data = r.json()
     #readAppReviews = open("iOSAppReviews.json", "r", encoding="utf8")
