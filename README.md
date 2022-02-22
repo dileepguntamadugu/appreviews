@@ -1,5 +1,5 @@
-# purpose
-Purpose of this project is to do sentiment analysis of app based on app reviews and generate a wordloud showing positive, negative and overall sentiments. Project is already soing sentiment analysis for BWS app. To do sentiment analysis on your own project, follow instructions in README.
+# Purpose
+Purpose of this project is to do sentiment analysis of app based on app reviews and generate a wordloud showing positive, negative and overall sentiments. Project is already doing sentiment analysis for BWS app. To do sentiment analysis on your own project, follow instructions in README.
 
 # appreviews
 Install Python and python package installer PIP module in your machine
@@ -40,5 +40,5 @@ You may get issues on Apple M1 as wordcloud library may not work. To fix those i
   brew install miniforge
   conda activate 
   conda init zsh (Only If you get erros and are asked to choose an environment then run and restart shell)
-  try running analyius again.
+  try running analysis again.
   
