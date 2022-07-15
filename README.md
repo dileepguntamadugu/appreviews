@@ -21,11 +21,11 @@ Stopwords: While doing sentiment analysis we dont want name of app to be include
 # Installs all python packages required for the analytics
 pip install -r requirements.txt
 
-# Generates the app reviews from itunes for the given app id. Reviews are for the last 500 reviews.
-python datacleanse.py
-
 # Run the analytics and generate the visualizations
 python analysis.py
+
+# Poll and run the analytics and generate the visualizations for every 24 hours
+while true; do python analysis.py && sleep 86400; done;
 
 # Output
 Once the analysis has run successfully, you will see a new tab in browser with graph showing categorization on basis of no of ratings

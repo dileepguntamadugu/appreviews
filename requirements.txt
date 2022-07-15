@@ -6,3 +6,6 @@ seaborn
 nltk
 WordCloud
 requests
+scikit-image
+xarray
+Flask
